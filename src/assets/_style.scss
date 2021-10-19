@@ -1,0 +1,56 @@
+$primary-color: #113460;
+$primary-faded-1: #b9cce4;
+$primary-faded-2: #dfebfc;
+$secondary-color: #e0ba94;
+$secondary-color-2-light: rgba(251, 175, 96, 0.5);
+$secondary-color-2: #fbaf60;
+$primary-bg: rgba(219, 218, 221, 0.2);
+
+@font-face {
+  font-family: "Hey Comic";
+  src: local("Hey Comic"), url(~@/assets/fonts/HeyComic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Stanberry";
+  src: local("Stanberry"), url(~@/assets/fonts/Stanberry.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "LatoLatin";
+  src: local("LatoLatin"),
+    url(~@/assets/fonts/LatoLatin-Regular.ttf) format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 13px;
+  line-height: 1.2em;
+  font-family: "LatoLatin", Helvetica, Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+button {
+  text-decoration: none;
+  border: none;
+}
+
+#other-devices {
+  @media only screen and (max-width: 480px),
+    only screen and (max-device-width: 480px) {
+    display: none;
+  }
+}
+
+#mobile {
+  @media only screen and (min-width: 480px),
+    only screen and (min-device-width: 480px) {
+    display: none;
+  }
+}

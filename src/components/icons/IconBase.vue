@@ -2,8 +2,8 @@
   <svg xmlns="http://www.w3.org/2000/svg" 
     :width="width" 
     :height="height" 
-    stroke="black"
-    stroke-width="6"
+    :stroke="stroke"
+    :stroke-width="strokeWidth"
     :viewBox="viewBox" 
     :aria-labelledby="iconName"
     :fill="iconColor"
@@ -17,11 +17,13 @@
 <script>
 export default {
   props: {
-    viewBox: { type: String, default: '0 0 24 24'},
+    viewBox: { type: String, default: '0 0 448 512'},
     iconName: { type: String, default: ''},
+    strokeWidth: { type: [Number, String], default: '' },
     width: { type: [Number, String], default: 32 },
     height: {type: [Number, String], default: 32 },
-    iconColor: {type: String, default: 'white'}
+    stroke: {type: String, default: 'none'},
+    iconColor: {type: String, default: '#113460'}
   }
 }
 </script>

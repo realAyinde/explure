@@ -26,7 +26,19 @@ const routes = [
     path: "/repair",
     name: "Repair",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Repair.vue"),
+      import("../views/Repair.vue"),
+  },
+  {
+    path: "/details",
+    name: "Details",
+    component: () =>
+      import("../views/ConfirmDetails.vue"),
+  },
+  {
+    path: "/review",
+    name: "Review",
+    component: () =>
+      import("../views/Reviews.vue"),
   },
 ];
 
