@@ -39,8 +39,14 @@
           <label for="option-2" class="option option-2"> Gas Recharge </label>
         </div>
         <label for="hours">Hours</label>
-        <dr-slider from="0" to="100" minValue="23" maxValue="57"/>
+        <dr-slider from="0" to="100" minValue="23" maxValue="57" />
         <label for="extraService">Extra Service</label>
+        <ul class="extras">
+          <li>Organizing</li>
+          <li>Cooking</li>
+          <li>Wash</li>
+          <li>Styling</li>
+        </ul>
 
         <a href="">Next</a>
       </form>
@@ -49,7 +55,7 @@
 </template>
 
 <style lang="scss">
-@import '~@/assets/style.scss';
+@import "~@/assets/style.scss";
 
 .options-wrapper {
   display: flex;
@@ -226,11 +232,33 @@
       background-color: $secondary-color-2;
       color: $primary-color;
       padding: 14px 20px;
-      margin: 1em 0;
+      margin: 2em 0;
       border: none;
       text-align: center;
       border-radius: 24px;
       cursor: pointer;
+    }
+  }
+
+  ul.extras {
+    margin: 1em 0;
+    display: flex;
+    gap: 1em;
+    overflow: auto;
+    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    li {
+      border-radius: 8px;
+      color: $primary-color;
+      padding: 1em 1.4em;
+      border: 1px solid $primary-color;
+      transition: all 0.3s ease;
     }
   }
 }

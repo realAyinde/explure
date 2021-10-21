@@ -1,23 +1,50 @@
 <template>
   <div class="repair">
     <div class="container page-header">
-      <a href="" class="btn-icon-sm"><icon-base width="14" height="14" fill="#113460" stroke="none" viewBox="0 0 320 512" icon-name="icon-chevronleft"><icon-chevronleft/></icon-base></a>
+      <a href="" class="btn-icon-sm"
+        ><icon-base
+          width="14"
+          height="14"
+          fill="#113460"
+          stroke="none"
+          viewBox="0 0 320 512"
+          icon-name="icon-chevronleft"
+          ><icon-chevronleft /></icon-base
+      ></a>
       <h2 class="title">Home Repair</h2>
-      <a href="" class="avatar"><icon-base width="32" height="32" stroke="none" fill="white" viewBox="0 0 448 512" icon-name="icon-user"><icon-user/></icon-base></a>
+      <a href="" class="avatar"
+        ><icon-base
+          width="32"
+          height="32"
+          stroke="none"
+          fill="white"
+          viewBox="0 0 448 512"
+          icon-name="icon-user"
+          ><icon-user /></icon-base
+      ></a>
     </div>
-    <div class="categories-slide">
-      <ul>
+    <div class="container">
+      <ul class="categories-slide">
         <li><a href="#">Cleaning</a></li>
-        <li><a href="">Repair</a></li>
-        <li><a href="">Laundry</a></li>
-        <!-- <li><a href="">Catering</a></li> -->
+        <li><a href="#">Repair</a></li>
+        <li><a href="#">Laundry</a></li>
+        <li><a href="#">Dressing</a></li>
+        <li><a href="#">Catering</a></li>
       </ul>
     </div>
     <div class="container">
       <div class="collapsible-card">
         <div class="top">
           <h2 class="title">Repair</h2>
-          <button class="top-btn"><icon-base width="10" height="10" fill="#113460" icon-name="icon-minus"><icon-minus/></icon-base></button>
+          <button class="top-btn">
+            <icon-base
+              width="10"
+              height="10"
+              fill="#113460"
+              icon-name="icon-minus"
+              ><icon-minus
+            /></icon-base>
+          </button>
         </div>
         <ul class="body">
           <li class="item">
@@ -28,11 +55,23 @@
             </div>
             <div class="increment">
               <button class="btn-icon-sm">
-                <icon-base width="10" height="10" fill="#113460" icon-name="icon-minus"><icon-minus/></icon-base>
+                <icon-base
+                  width="10"
+                  height="10"
+                  fill="#113460"
+                  icon-name="icon-minus"
+                  ><icon-minus
+                /></icon-base>
               </button>
               <span>2</span>
               <button class="btn-icon-sm">
-                <icon-base width="10" height="10" fill="#113460" icon-name="icon-plus"><icon-plus/></icon-base>
+                <icon-base
+                  width="10"
+                  height="10"
+                  fill="#113460"
+                  icon-name="icon-plus"
+                  ><icon-plus
+                /></icon-base>
               </button>
             </div>
           </li>
@@ -44,11 +83,23 @@
             </div>
             <div class="increment">
               <button class="btn-icon-sm">
-                <icon-base width="10" height="10" fill="#113460" icon-name="icon-minus"><icon-minus/></icon-base>
+                <icon-base
+                  width="10"
+                  height="10"
+                  fill="#113460"
+                  icon-name="icon-minus"
+                  ><icon-minus
+                /></icon-base>
               </button>
               <span>1</span>
               <button class="btn-icon-sm">
-                <icon-base width="10" height="10" fill="#113460" icon-name="icon-plus"><icon-plus/></icon-base>
+                <icon-base
+                  width="10"
+                  height="10"
+                  fill="#113460"
+                  icon-name="icon-plus"
+                  ><icon-plus
+                /></icon-base>
               </button>
             </div>
           </li>
@@ -60,11 +111,23 @@
             </div>
             <div class="increment">
               <button class="btn-icon-sm">
-                <icon-base width="10" height="10" fill="#113460" icon-name="icon-minus"><icon-minus/></icon-base>
+                <icon-base
+                  width="10"
+                  height="10"
+                  fill="#113460"
+                  icon-name="icon-minus"
+                  ><icon-minus
+                /></icon-base>
               </button>
               <span>2</span>
               <button class="btn-icon-sm">
-                <icon-base width="10" height="10" fill="#113460" icon-name="icon-plus"><icon-plus/></icon-base>
+                <icon-base
+                  width="10"
+                  height="10"
+                  fill="#113460"
+                  icon-name="icon-plus"
+                  ><icon-plus
+                /></icon-base>
               </button>
             </div>
           </li>
@@ -76,11 +139,23 @@
             </div>
             <div class="increment">
               <button class="btn-icon-sm">
-                <icon-base width="10" height="10" fill="#113460" icon-name="icon-minus"><icon-minus/></icon-base>
+                <icon-base
+                  width="10"
+                  height="10"
+                  fill="#113460"
+                  icon-name="icon-minus"
+                  ><icon-minus
+                /></icon-base>
               </button>
               <span>2</span>
               <button class="btn-icon-sm">
-                <icon-base width="10" height="10" fill="#113460" icon-name="icon-plus"><icon-plus/></icon-base>
+                <icon-base
+                  width="10"
+                  height="10"
+                  fill="#113460"
+                  icon-name="icon-plus"
+                  ><icon-plus
+                /></icon-base>
               </button>
             </div>
           </li>
@@ -89,13 +164,29 @@
       <div class="collapsible-card">
         <div class="top">
           <h2 class="title">Plumbing</h2>
-          <button><icon-base width="10" height="10" fill="#113460" icon-name="icon-minus"><icon-minus/></icon-base></button>
+          <button>
+            <icon-base
+              width="10"
+              height="10"
+              fill="#113460"
+              icon-name="icon-minus"
+              ><icon-minus
+            /></icon-base>
+          </button>
         </div>
       </div>
       <div class="collapsible-card">
         <div class="top">
           <h2 class="title">Furnished</h2>
-          <button><icon-base width="10" height="10" fill="#113460" icon-name="icon-minus"><icon-minus/></icon-base></button>
+          <button>
+            <icon-base
+              width="10"
+              height="10"
+              fill="#113460"
+              icon-name="icon-minus"
+              ><icon-minus
+            /></icon-base>
+          </button>
         </div>
       </div>
     </div>
@@ -117,13 +208,13 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~@/assets/style.scss';
+@import "~@/assets/style.scss";
 
 .repair {
   color: $primary-color;
 
   .container {
-    margin: 16px;
+    margin: 16px 1.5em;
   }
 
   .btn-icon-sm {
@@ -162,25 +253,33 @@ export default {
     }
   }
 
-  .categories-slide {
-    width: 100%;
-    margin: 3em 0;
-    // overflow: scroll;
-
-    ul {
+  ul.categories-slide {
+    margin: 2em 0;
       display: flex;
-      gap: 0.75em;
+      gap: 1em;
+      overflow: auto;
+      width: 100%;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
 
       li a {
-        padding: 0.8em 2em;
+        display: block;
         border-radius: 8px;
+        cursor: pointer;
+        color: $primary-color;
+        padding: 1em 2em;
         border: 1px solid $primary-color;
+        transition: all 0.3s ease;
 
-        &:active {
-        border: 1px solid $secondary-color-2;
-}
+        &:active, &:hover {
+          border: 1px solid $secondary-color-2;
+        }
       }
-    }
+    
   }
 
   .collapsible-card {
