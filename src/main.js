@@ -19,6 +19,8 @@ import caretdown from '@/components/icons/caretdown.vue'
 import chevronright from '@/components/icons/chevronright.vue'
 import chevronleft from '@/components/icons/chevronleft.vue'
 import DRSlider from '@/components/doubleRangesSlider.vue'
+import Menu from '@/components/menu.vue'
+import PageHeader from '@/components/PageHeader.vue'
 
 const app = createApp(App).use(store).use(router)
 
@@ -36,6 +38,8 @@ app.component("icon-base", IconBase)
     .component('icon-chevronright', chevronright)
     .component('icon-chevronleft', chevronleft)
     .component('icon-qrcode', qrcode)
-    .component('dr-slider', DRSlider);
+    .component('dr-slider', DRSlider)
+    .component('app-menu', Menu)
+    .component('app-pageheader', PageHeader);
 
 app.mount("#app")

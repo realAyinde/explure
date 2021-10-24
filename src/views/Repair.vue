@@ -1,28 +1,6 @@
 <template>
+  <app-pageheader title="Home Repair" />
   <div class="repair">
-    <div class="container page-header">
-      <a href="" class="btn-icon-sm"
-        ><icon-base
-          width="14"
-          height="14"
-          fill="#113460"
-          stroke="none"
-          viewBox="0 0 320 512"
-          icon-name="icon-chevronleft"
-          ><icon-chevronleft /></icon-base
-      ></a>
-      <h2 class="title">Home Repair</h2>
-      <a href="" class="avatar"
-        ><icon-base
-          width="32"
-          height="32"
-          stroke="none"
-          fill="white"
-          viewBox="0 0 448 512"
-          icon-name="icon-user"
-          ><icon-user /></icon-base
-      ></a>
-    </div>
     <div class="container">
       <ul class="categories-slide">
         <li><a href="#">Cleaning</a></li>
@@ -34,175 +12,159 @@
     </div>
     <div class="container">
       <div class="collapsible-card">
-        <div class="top">
-          <h2 class="title">Repair</h2>
-          <button class="top-btn">
-            <icon-base
-              width="10"
-              height="10"
-              fill="#113460"
-              icon-name="icon-minus"
-              ><icon-minus
-            /></icon-base>
-          </button>
-        </div>
-        <ul class="body">
-          <li class="item">
-            <div class="icon-container"></div>
-            <div class="mid">
-              <div class="name">Walton Fridge</div>
-              <div class="price">$36</div>
-            </div>
-            <div class="increment">
-              <button class="btn-icon-sm">
-                <icon-base
-                  width="10"
-                  height="10"
-                  fill="#113460"
-                  icon-name="icon-minus"
-                  ><icon-minus
-                /></icon-base>
-              </button>
-              <span>2</span>
-              <button class="btn-icon-sm">
-                <icon-base
-                  width="10"
-                  height="10"
-                  fill="#113460"
-                  icon-name="icon-plus"
-                  ><icon-plus
-                /></icon-base>
-              </button>
-            </div>
-          </li>
-          <li class="item">
-            <div class="icon-container"></div>
-            <div class="mid">
-              <div class="name">Ponda Gas</div>
-              <div class="price">$99</div>
-            </div>
-            <div class="increment">
-              <button class="btn-icon-sm">
-                <icon-base
-                  width="10"
-                  height="10"
-                  fill="#113460"
-                  icon-name="icon-minus"
-                  ><icon-minus
-                /></icon-base>
-              </button>
-              <span>1</span>
-              <button class="btn-icon-sm">
-                <icon-base
-                  width="10"
-                  height="10"
-                  fill="#113460"
-                  icon-name="icon-plus"
-                  ><icon-plus
-                /></icon-base>
-              </button>
-            </div>
-          </li>
-          <li class="item">
-            <div class="icon-container"></div>
-            <div class="mid">
-              <div class="name">Walton AC</div>
-              <div class="price">$78</div>
-            </div>
-            <div class="increment">
-              <button class="btn-icon-sm">
-                <icon-base
-                  width="10"
-                  height="10"
-                  fill="#113460"
-                  icon-name="icon-minus"
-                  ><icon-minus
-                /></icon-base>
-              </button>
-              <span>2</span>
-              <button class="btn-icon-sm">
-                <icon-base
-                  width="10"
-                  height="10"
-                  fill="#113460"
-                  icon-name="icon-plus"
-                  ><icon-plus
-                /></icon-base>
-              </button>
-            </div>
-          </li>
-          <li class="item">
-            <div class="icon-container"></div>
-            <div class="mid">
-              <div class="name">Walton Fridge</div>
-              <div class="price">$24</div>
-            </div>
-            <div class="increment">
-              <button class="btn-icon-sm">
-                <icon-base
-                  width="10"
-                  height="10"
-                  fill="#113460"
-                  icon-name="icon-minus"
-                  ><icon-minus
-                /></icon-base>
-              </button>
-              <span>2</span>
-              <button class="btn-icon-sm">
-                <icon-base
-                  width="10"
-                  height="10"
-                  fill="#113460"
-                  icon-name="icon-plus"
-                  ><icon-plus
-                /></icon-base>
-              </button>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="collapsible-card">
-        <div class="top">
-          <h2 class="title">Plumbing</h2>
-          <button>
-            <icon-base
-              width="10"
-              height="10"
-              fill="#113460"
-              icon-name="icon-minus"
-              ><icon-minus
-            /></icon-base>
-          </button>
+        <button class="collapsible-btn">Repair</button>
+        <div class="collapsible-content">
+          <ul>
+            <li class="item">
+              <div class="icon-container"></div>
+              <div class="mid">
+                <div class="name">Walton Fridge</div>
+                <div class="price">$36</div>
+              </div>
+              <div class="increment">
+                <button>-</button>
+                <span>2</span>
+                <button>+</button>
+              </div>
+            </li>
+            <li class="item">
+              <div class="icon-container"></div>
+              <div class="mid">
+                <div class="name">Ponda Gas</div>
+                <div class="price">$99</div>
+              </div>
+              <div class="increment">
+                <button>-</button>
+                <span>2</span>
+                <button>+</button>
+              </div>
+            </li>
+            <li class="item">
+              <div class="icon-container"></div>
+              <div class="mid">
+                <div class="name">Walton AC</div>
+                <div class="price">$78</div>
+              </div>
+              <div class="increment">
+                <button>-</button>
+                <span>2</span>
+                <button>+</button>
+              </div>
+            </li>
+            <li class="item">
+              <div class="icon-container"></div>
+              <div class="mid">
+                <div class="name">Walton Fridge</div>
+                <div class="price">$24</div>
+              </div>
+              <div class="increment">
+                <button>-</button>
+                <span>2</span>
+                <button>+</button>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="collapsible-card">
-        <div class="top">
-          <h2 class="title">Furnished</h2>
-          <button>
-            <icon-base
-              width="10"
-              height="10"
-              fill="#113460"
-              icon-name="icon-minus"
-              ><icon-minus
-            /></icon-base>
-          </button>
+        <button class="collapsible-btn">Plumbing</button>
+         <div class="collapsible-content">
+          <ul>
+            <li class="item">
+              <div class="icon-container"></div>
+              <div class="mid">
+                <div class="name">Walton Fridge</div>
+                <div class="price">$36</div>
+              </div>
+              <div class="increment">
+                <button>-</button>
+                <span>2</span>
+                <button>+</button>
+              </div>
+            </li>
+            <li class="item">
+              <div class="icon-container"></div>
+              <div class="mid">
+                <div class="name">Ponda Gas</div>
+                <div class="price">$99</div>
+              </div>
+              <div class="increment">
+                <button>-</button>
+                <span>2</span>
+                <button>+</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapsible-card">
+        <button class="collapsible-btn">Plumbing</button>
+         <div class="collapsible-content">
+          <ul>
+            <li class="item">
+              <div class="icon-container"></div>
+              <div class="mid">
+                <div class="name">Ponda Gas</div>
+                <div class="price">$99</div>
+              </div>
+              <div class="increment">
+                <button>-</button>
+                <span>2</span>
+                <button>+</button>
+              </div>
+            </li>
+            <li class="item">
+              <div class="icon-container"></div>
+              <div class="mid">
+                <div class="name">Walton AC</div>
+                <div class="price">$78</div>
+              </div>
+              <div class="increment">
+                <button>-</button>
+                <span>2</span>
+                <button>+</button>
+              </div>
+            </li>
+            <li class="item">
+              <div class="icon-container"></div>
+              <div class="mid">
+                <div class="name">Walton Fridge</div>
+                <div class="price">$24</div>
+              </div>
+              <div class="increment">
+                <button>-</button>
+                <span>2</span>
+                <button>+</button>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <Menu />
+  <app-menu />
 </template>
 
 <script>
-// @ is an alias to /src
-import Menu from "@/components/menu.vue";
-
 export default {
   name: "Repair",
-  components: {
-    Menu,
+  components: {},
+
+  mounted() {
+    var coll = document.getElementsByClassName("collapsible-btn");
+    // var i;
+    for (let i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
   },
 };
 </script>
@@ -212,142 +174,135 @@ export default {
 
 .repair {
   color: $primary-color;
+  margin: 60px 0;
 
   .container {
     margin: 16px 1.5em;
   }
 
-  .btn-icon-sm {
-    height: 28px;
-    width: 28px;
-    background-color: $primary-faded-1;
-    border-radius: 10px;
-    text-align: center;
-  }
-
-  .page-header {
-    display: flex;
-    justify-content: space-between;
-    // height: px;
-
-    .title {
-      font-size: 1.2em;
-      line-height: 32px;
-      font-weight: bold;
-    }
-
-    a {
-      line-height: 32px;
-      align-self: center;
-    }
-
-    .avatar {
-      height: 32px;
-      width: 32px;
-      background-color: $secondary-color;
-      border-radius: 50%;
-
-      svg {
-        border-radius: 50%;
-      }
-    }
-  }
-
   ul.categories-slide {
     margin: 2em 0;
-      display: flex;
-      gap: 1em;
-      overflow: auto;
-      width: 100%;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
+    display: flex;
+    gap: 1em;
+    overflow: auto;
+    width: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 
-      &::-webkit-scrollbar {
-        display: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    li a {
+      display: block;
+      border-radius: 8px;
+      cursor: pointer;
+      color: $primary-color;
+      padding: 1em 2em;
+      border: 1px solid $primary-color;
+      transition: all 0.3s ease;
+
+      &:active,
+      &:hover {
+        border: 1px solid $secondary-color-2;
       }
-
-      li a {
-        display: block;
-        border-radius: 8px;
-        cursor: pointer;
-        color: $primary-color;
-        padding: 1em 2em;
-        border: 1px solid $primary-color;
-        transition: all 0.3s ease;
-
-        &:active, &:hover {
-          border: 1px solid $secondary-color-2;
-        }
-      }
-    
+    }
   }
 
   .collapsible-card {
     margin: 1em 0;
-    padding: 1.5em 1em;
+    // padding: 1.5em 1em;
     background-color: $primary-bg;
     border-radius: 12px;
 
-    .top {
-      display: flex;
-      justify-content: space-between;
-      // margin: 1em 0;
+    .collapsible-btn {
+      background-color: transparent;
+      color: $primary-color;
+      cursor: pointer;
+      border-radius: 0 12px 12px 0;
+      padding: 1em;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 1.2em;
+      font-weight: bold;
+      outline: none;
 
-      .title {
-        font-size: 1.2em;
+      &:after {
+        content: "\002B";
+        color: $primary-color;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+        transform: rotateZ(0deg);
+        transition: transform 0.2s ease-out;
       }
 
-      .top-btn {
-        text-decoration: none;
-        background-color: transparent;
-        border: none;
-        text-decoration: none;
-        cursor: pointer;
+      &.active:after {
+        transform: rotateZ(45deg);
       }
     }
 
-    ul {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin-top: 1em;
+    .collapsible-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      padding: 0 1em;
 
-      li {
+      ul {
         display: flex;
-        margin: 0.75em 0;
+        flex-direction: column;
         width: 100%;
-        gap: 0.5em;
-        align-content: center;
-        // justify-content: stretch;
 
-        .icon-container {
-          height: 36px;
-          background-color: $primary-faded-1;
-          width: 36px;
-          align-self: flex-start;
-          border-radius: 12px;
-        }
-
-        .mid {
-          flex: auto;
+        li {
           display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
+          margin: 0.75em 0;
+          width: 100%;
+          gap: 0.5em;
+          align-content: center;
+          // justify-content: stretch;
 
-          .price {
-            font-size: 1.1em;
+          .icon-container {
+            height: 36px;
+            background-color: $primary-faded-1;
+            width: 36px;
+            align-self: flex-start;
+            border-radius: 12px;
           }
-        }
 
-        .increment {
-          align-self: center;
-          display: flex;
+          .mid {
+            flex: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
 
-          span {
-            display: inline-block;
-            line-height: 28px;
-            text-align: center;
-            width: 28px;
+            .price {
+              font-size: 1.1em;
+            }
+          }
+
+          .increment {
+            align-self: center;
+            display: flex;
+
+            button {
+              color: $primary-color;
+              font-weight: bold;
+              font-size: 1.3em;
+              height: 28px;
+              width: 28px;
+              line-height: 28px;
+              background-color: $primary-faded-1;
+              border-radius: 10px;
+              text-align: center;
+            }
+
+            span {
+              display: inline-block;
+              line-height: 28px;
+              text-align: center;
+              width: 28px;
+            }
           }
         }
       }

@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
     <div class="menu-item">
-      <a class="">
+      <a href="/">
         <icon-base
           width="24"
           height="24"
@@ -12,7 +12,7 @@
       </a>
     </div>
     <div class="menu-item">
-      <a class="">
+      <a href="/details">
         <icon-base
           width="24"
           height="24"
@@ -42,7 +42,7 @@
       </a>
     </div>
     <div class="menu-item">
-      <a class="">
+      <a href="/review">
         <icon-base
           width="24"
           height="24"

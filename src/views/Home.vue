@@ -6,48 +6,37 @@
         <ul class="categories">
           <li class="item">
             <a href="#" class="category-item">
-              <div class="illustrator-container">
-
-              </div>
+              <div class="illustrator-container"></div>
               <h3 class="name">Cleaning</h3>
             </a>
           </li>
           <li class="item">
             <a href="#" class="category-item">
-              <div class="illustrator-container">
-
-              </div>
+              <div class="illustrator-container"></div>
               <h3 class="name">Baking</h3>
             </a>
           </li>
           <li class="item">
             <a href="#" class="category-item">
-              <div class="illustrator-container">
-
-              </div>
+              <div class="illustrator-container"></div>
               <h3 class="name">Disinfecting</h3>
             </a>
           </li>
           <li class="item">
             <a href="#" class="category-item">
-              <div class="illustrator-container">
-
-              </div>
+              <div class="illustrator-container"></div>
               <h3 class="name">Repairing</h3>
             </a>
           </li>
           <li class="item">
             <a href="#" class="category-item">
-              <div class="illustrator-container">
-              </div>
+              <div class="illustrator-container"></div>
               <h3 class="name">Laundry</h3>
             </a>
           </li>
           <li class="item">
             <a href="#" class="category-item">
-              <div class="illustrator-container">
-
-              </div>
+              <div class="illustrator-container"></div>
               <h3 class="name">Painting</h3>
             </a>
           </li>
@@ -66,15 +55,18 @@
             />
             <div class="card-details">
               <div class="top">
-                <p class="rating"><icon-base
-                  width="12"
-                  height="12"
-                  stroke="none"
-                  fill="gold"
-                  viewBox="0 0 576 512"
-                  icon-name="icon-star"
-                  ><icon-star /></icon-base
-                > 4.1</p>
+                <p class="rating">
+                  <icon-base
+                    width="12"
+                    height="12"
+                    stroke="none"
+                    fill="gold"
+                    viewBox="0 0 576 512"
+                    icon-name="icon-star"
+                    ><icon-star
+                  /></icon-base>
+                  4.1
+                </p>
                 <p class="discount">off 30%</p>
               </div>
               <h2 class="title">Home Cleaning</h2>
@@ -90,15 +82,18 @@
             />
             <div class="card-details">
               <div class="top">
-                <p class="rating"><icon-base
-                  width="12"
-                  height="12"
-                  stroke="none"
-                  fill="gold"
-                  viewBox="0 0 576 512"
-                  icon-name="icon-star"
-                  ><icon-star /></icon-base
-                > 4.0</p>
+                <p class="rating">
+                  <icon-base
+                    width="12"
+                    height="12"
+                    stroke="none"
+                    fill="gold"
+                    viewBox="0 0 576 512"
+                    icon-name="icon-star"
+                    ><icon-star
+                  /></icon-base>
+                  4.0
+                </p>
                 <p class="discount">off 25%</p>
               </div>
               <h2 class="title">Kitchen Cleaning</h2>
@@ -114,15 +109,18 @@
             />
             <div class="card-details">
               <div class="top">
-                <p class="rating"><icon-base
-                  width="12"
-                  height="12"
-                  stroke="none"
-                  fill="gold"
-                  viewBox="0 0 576 512"
-                  icon-name="icon-star"
-                  ><icon-star /></icon-base
-                > 4.7</p>
+                <p class="rating">
+                  <icon-base
+                    width="12"
+                    height="12"
+                    stroke="none"
+                    fill="gold"
+                    viewBox="0 0 576 512"
+                    icon-name="icon-star"
+                    ><icon-star
+                  /></icon-base>
+                  4.7
+                </p>
                 <p class="discount">off 37%</p>
               </div>
               <h2 class="title">Cooking</h2>
@@ -134,25 +132,23 @@
       </div>
     </div>
   </div>
-  <Menu />
+  <app-menu />
 </template>
 
 <script>
 // @ is an alias to /src
-import Menu from "@/components/menu.vue";
 // import AdCarousel from "@/components/adCarousel.vue";
 
 export default {
   name: "Home",
   components: {
-    Menu,
-    // AdCarousel,
+    // AdCarousel
   },
 };
 </script>
 
 <style scoped lang="scss">
-@import '~@/assets/style.scss';
+@import "~@/assets/style.scss";
 
 .home {
   min-height: 100vh;
@@ -160,10 +156,9 @@ export default {
   .section {
     // min-height: 200px;
     width: auto;
-    margin:1em;
+    margin: 1em;
     margin-bottom: 12px;
     padding: 1em;
-
 
     &:last-child {
       margin-bottom: 60px;
@@ -172,7 +167,7 @@ export default {
     .contents {
       h2 {
         font-size: 1.4em;
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
         // font-weight: bold;
       }
 
@@ -280,22 +275,23 @@ export default {
       flex: 1;
 
       .category-item {
-        
         .illustrator-container {
           height: 75px;
           width: 75px;
           border: 1px solid $primary-bg;
           border-radius: 50%;
-          margin: .75em 0;
+          margin: 0.75em 0;
         }
 
-        &:active, &:hover .illustrator-container {
-        box-shadow: rgba(131, 154, 177, 0.04) 0px -4px 2px,
-    rgba(139, 106, 106, 0.25) 0px -2px 2px inset;
+        &:active,
+        &:hover .illustrator-container {
+          box-shadow: rgba(131, 154, 177, 0.04) 0px -4px 2px,
+            rgba(139, 106, 106, 0.25) 0px -2px 2px inset;
         }
 
-        &:active, &:hover .name {
-       font-weight: bold;
+        &:active,
+        &:hover .name {
+          font-weight: bold;
         }
 
         .name {

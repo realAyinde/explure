@@ -2,7 +2,7 @@ $primary-color: #113460;
 $primary-faded-1: #b9cce4;
 $primary-faded-2: #dfebfc;
 $secondary-color: #e0ba94;
-$secondary-color-2-light: rgba(251, 175, 96, 0.5);
+$secondary-color-2-light: #ebad6b;
 $secondary-color-2: #fbaf60;
 $primary-bg: rgba(219, 218, 221, 0.2);
 
@@ -29,6 +29,7 @@ $primary-bg: rgba(219, 218, 221, 0.2);
   font-size: 13px;
   line-height: 1.2em;
   font-family: "LatoLatin", Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ul {
@@ -39,6 +40,16 @@ a,
 button {
   text-decoration: none;
   border: none;
+}
+
+.btn-icon-sm {
+  height: 28px;
+  width: 28px;
+  background-color: $primary-faded-1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #other-devices {

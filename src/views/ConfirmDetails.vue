@@ -1,28 +1,6 @@
 <template>
+  <app-pageheader title="Confirm Details"></app-pageheader>
   <div class="confirm-details">
-    <div class="container page-header">
-      <a href="" class="btn-icon-sm"
-        ><icon-base
-          width="14"
-          height="14"
-          fill="#113460"
-          stroke="none"
-          viewBox="0 0 320 512"
-          icon-name="icon-chevronleft"
-          ><icon-chevronleft /></icon-base
-      ></a>
-      <h2 class="title">Confirm Details</h2>
-      <a href="" class="avatar"
-        ><icon-base
-          width="32"
-          height="32"
-          stroke="none"
-          fill="white"
-          viewBox="0 0 448 512"
-          icon-name="icon-user"
-          ><icon-user /></icon-base
-      ></a>
-    </div>
     <div class="container">
       <form action="" method="post">
         <label for="rname">Reciever Name</label>
@@ -39,7 +17,7 @@
           <label for="option-2" class="option option-2"> Gas Recharge </label>
         </div>
         <label for="hours">Hours</label>
-        <dr-slider from="0" to="100" minValue="23" maxValue="57" />
+        <dr-slider from="0" to="10" minValue="3" maxValue="5" unit="hours" />
         <label for="extraService">Extra Service</label>
         <ul class="extras">
           <li>Organizing</li>
@@ -52,6 +30,7 @@
       </form>
     </div>
   </div>
+  <app-menu />
 </template>
 
 <style lang="scss">
@@ -80,129 +59,12 @@
   border-color: $secondary-color-2;
 }
 
-.ranges-wrapper {
-  position: relative;
-  width: 100%;
-
-  .container {
-    position: relative;
-    width: auto;
-    height: 50px;
-
-    input[type="range"] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      width: 100%;
-      outline: none;
-      position: absolute;
-      margin: auto;
-      top: 0;
-      bottom: 0;
-      background-color: transparent;
-      pointer-events: none;
-    }
-    .slider-track {
-      width: 100%;
-      height: 4px;
-      position: absolute;
-      margin: auto;
-      background-color: $primary-bg;
-      top: 0;
-      bottom: 0;
-      border-radius: 5px;
-    }
-    input[type="range"]::-webkit-slider-runnable-track {
-      -webkit-appearance: none;
-      height: 5px;
-    }
-    input[type="range"]::-moz-range-track {
-      -moz-appearance: none;
-      height: 5px;
-    }
-    input[type="range"]::-ms-track {
-      appearance: none;
-      height: 5px;
-    }
-    input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      height: 1.7em;
-      width: 1.7em;
-      background-color: $secondary-color-2-light;
-      cursor: pointer;
-      margin-top: -9px;
-      pointer-events: auto;
-      border-radius: 50%;
-      border: 1px solid $secondary-color-2;
-    }
-    input[type="range"]::-moz-range-thumb {
-      -webkit-appearance: none;
-      height: 1.7em;
-      width: 1.7em;
-      cursor: pointer;
-      border-radius: 50%;
-      pointer-events: auto;
-      background-color: $secondary-color-2-light;
-      border: 1px solid $secondary-color-2;
-    }
-    input[type="range"]::-ms-thumb {
-      appearance: none;
-      height: 1.7em;
-      width: 1.7em;
-      cursor: pointer;
-      border-radius: 50%;
-      background-color: $secondary-color-2-light;
-      border: 1px solid $secondary-color-2;
-      pointer-events: auto;
-    }
-    input[type="range"]:active::-webkit-slider-thumb {
-      background-color: #ffffff;
-      border: 3px solid #18191b;
-    }
-  }
-}
-
 .confirm-details {
   color: $primary-color;
+  margin-top: 54px;
 
   .container {
-    margin: 16px;
-  }
-
-  .btn-icon-sm {
-    height: 28px;
-    width: 28px;
-    background-color: $primary-faded-1;
-    border-radius: 10px;
-    text-align: center;
-  }
-
-  .page-header {
-    display: flex;
-    justify-content: space-between;
-    // height: px;
-
-    .title {
-      font-size: 1.2em;
-      line-height: 32px;
-      font-weight: bold;
-    }
-
-    a {
-      line-height: 32px;
-      align-self: center;
-    }
-
-    .avatar {
-      height: 32px;
-      width: 32px;
-      background-color: $secondary-color;
-      border-radius: 50%;
-
-      svg {
-        border-radius: 50%;
-      }
-    }
+    margin: 16px 1.5em;
   }
 
   form {
@@ -219,11 +81,11 @@
       border: none;
       border-radius: 12px;
       font-size: 1em;
-    }
 
-    input:focus {
-      text-decoration: none;
-      border: none;
+      &:focus {
+        outline: none;
+        background-color: $primary-faded-2;
+      }
     }
 
     a {

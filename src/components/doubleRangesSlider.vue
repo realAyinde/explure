@@ -1,21 +1,13 @@
 <template>
   <div class="ranges-wrapper">
     <div class="container">
-      <div class="slider-track"></div>
-      <input
-        type="range"
-        :min="from"
-        :max="to"
-        :value=minValue
-        ref="slide1"
-      />
-      <input
-        type="range"
-        :min="from"
-        :max="to"
-        :value="maxValue"
-        ref="slide2"
-      />
+      <div class="slider-track" :style="sliderTrackStyle"></div>
+      <input type="range" :min="from" :max="to" v-model="s1value" />
+      <input type="range" :min="from" :max="to" v-model="s2value" />
+    </div>
+    <div class="values">
+      <span class="value1" :style="value1style" v-text="s1()"></span>
+      <span class="value2" :style="value2style" v-text="s2()"></span>
     </div>
   </div>
 </template>
@@ -24,94 +16,59 @@
 export default {
   name: "DRSlider",
   props: {
-    from: { type: [Number, String],  required:true, default: 0 },
-    to: { type: [Number, String],  required:true, default: 10 },
-    minValue: { type: [Number, String], required:true, default: 0 },
-    maxValue: { type: [Number, String], required:true, default: 5 },
+    from: { type: [Number, String], required: true, default: 0 },
+    to: { type: [Number, String], required: true, default: 10 },
+    minValue: { type: [Number, String], required: true, default: 0 },
+    maxValue: { type: [Number, String], required: true, default: 5 },
+    unit: { type: [String], default: "" },
   },
- 
-  data() {
-      return {
-          minGap: 0,
-          s1value: {type: [Number, String], default: 50}
-      }
-  },
-  computed: {
 
+  data() {
+    return {
+      minGap: 0,
+      s1value: this.minValue,
+      s2value: this.maxValue,
+      sliderTrackStyle: "",
+      value1style: "",
+      value2style: "",
+    };
   },
   watch: {
-      'minValue'() {
-          console.log(this.minValue)
-      }
-    //   slideOne() {
-    //    if (parseInt(this.$refs.slide2.value)- parseInt(this.$refs.slide1.value) <= this.minGap){
-    //           this.$refs.slide1.value = parseInt(this.$refs.slide2.value) - this.minGap;
-    //           let gh = this.$refs.slide1.value
-
-    //           console.log(gh)
-    //       }
-    //   }
-
+    s1value() {
+      this.s1();
+    },
+    s2value() {
+      this.s2();
+    },
   },
   methods: {
-      slideOne() {
-        //   if (parseInt(this.$refs.slide2.value)- parseInt(this.$refs.slide1.value) <= this.minGap){
-        //       this.$refs.slide1.value = parseInt(this.$refs.slide2.value) - this.minGap;
-
-              let change = this.$refs.slide1.value
-              console.log(change)
-        //   }
+    s1() {
+      if (parseInt(this.s2value) - parseInt(this.s1value) <= this.minGap) {
+        this.s1value = parseInt(this.s2value) - this.minGap;
       }
-    
-
-  },
-//   created() {
-//       let gh = this.$refs.slide1.value
-//               console.log(gh)
-//   },
-  mounted() {
-      this.s1value = this.$refs.slide1.value
-              console.log(this.s1value)
-    //    slideOne() { 
-        //   if (parseInt(this.$refs.slide2.value)- parseInt(this.$refs.slide1.value) <= this.minGap){
-        //       this.$refs.slide1.value = parseInt(this.$refs.slide2.value) - this.minGap;
-
-        //       let debug=this.$refs.slide1.value
-        //       console.log(debug)
-        //   }
-    //   console.log(this.)
-    // window.onload = function () {
-    //   slideOne();
-    //   slideTwo();
-    // };
-
-    // let sliderOne = document.getElementById("slider-1");
-    // let sliderTwo = document.getElementById("slider-2");
-    // let displayValOne = document.getElementById("range1");
-    // let displayValTwo = document.getElementById("range2");
-    // let minGap = 0;
-    // let sliderTrack = document.querySelector(".slider-track");
-    // let sliderMaxValue = document.getElementById("slider-1").max;
-
-    // function slideOne() {
-    //   if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-    //     sliderOne.value = parseInt(sliderTwo.value) - minGap;
-    //   }
-    //   displayValOne.textContent = sliderOne.value;
-    //   fillColor();
-    // }
-    // function slideTwo() {
-    //   if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-    //     sliderTwo.value = parseInt(sliderOne.value) + minGap;
-    //   }
-    //   displayValTwo.textContent = sliderTwo.value;
-    //   fillColor();
-    // }
-    // function fillColor() {
-    //   percent1 = (sliderOne.value / sliderMaxValue) * 100;
-    //   percent2 = (sliderTwo.value / sliderMaxValue) * 100;
-    //   sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`;
-    // }
+      this.fillColor();
+      this.adjustValue();
+      return `${this.s1value} ${this.unit}`;
+    },
+    s2() {
+      if (parseInt(this.s2value) - parseInt(this.s1value) <= this.minGap) {
+        this.s2value = parseInt(this.s1value) + this.minGap;
+      }
+      this.fillColor();
+      this.adjustValue();
+      return `${this.s2value} ${this.unit}`;
+    },
+    fillColor() {
+      const percent1 = (this.s1value / this.to) * 100;
+      const percent2 = (this.s2value / this.to) * 100;
+      this.sliderTrackStyle = `background: linear-gradient(to right, #dadae5 ${percent1}% , #fbaf60 ${percent1}% , #fbaf60 ${percent2}%, #dadae5 ${percent2}%)`;
+    },
+    adjustValue() {
+      const position1 = (this.s1value / this.to) * 100;
+      const position2 = (this.s2value / this.to) * 100;
+      this.value1style = `left: ${position1}%`;
+      this.value2style = `left: ${position2}%`;
+    },
   },
 };
 </script>
@@ -122,11 +79,32 @@ export default {
 .ranges-wrapper {
   position: relative;
   width: 100%;
+  margin-bottom: 1em;
+
+  .values {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    height: 15px;
+
+    .value1,
+    .value2 {
+      position: absolute;
+      left: 0;
+      font-size: 0.8em;
+      color: $primary-color;
+      transform: translateX(-50%);
+    }
+  }
 
   .container {
+    padding: 0;
+    margin: 0;
     position: relative;
-    width: auto;
-    height: 50px;
+    width: 100%;
+    height: 40px;
 
     input[type="range"] {
       -webkit-appearance: none;
@@ -135,7 +113,8 @@ export default {
       width: 100%;
       outline: none;
       position: absolute;
-      margin: auto;
+      // margin: auto;
+      padding: 0;
       top: 0;
       bottom: 0;
       background-color: transparent;
@@ -167,7 +146,7 @@ export default {
       -webkit-appearance: none;
       height: 1.7em;
       width: 1.7em;
-      background-color: $secondary-color-2-light;
+      background-color: $secondary-color;
       cursor: pointer;
       margin-top: -9px;
       pointer-events: auto;
@@ -181,7 +160,7 @@ export default {
       cursor: pointer;
       border-radius: 50%;
       pointer-events: auto;
-      background-color: $secondary-color-2-light;
+      background-color: $secondary-color;
       border: 1px solid $secondary-color-2;
     }
     input[type="range"]::-ms-thumb {
@@ -190,7 +169,7 @@ export default {
       width: 1.7em;
       cursor: pointer;
       border-radius: 50%;
-      background-color: $secondary-color-2-light;
+      background-color: $secondary-color;
       border: 1px solid $secondary-color-2;
       pointer-events: auto;
     }
